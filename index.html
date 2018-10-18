@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <style>
+        .center {
+            text-align: center;
+            margin-top: 100px;
+        }
+        .new {
+            display: inline-block;
+            padding: 15px 30px;
+            position: relative;
+            color: red;
+            border: 1px solid red;
+            text-decoration: none;
+            overflow: hidden;
+        }
+        .new span {
+            display: block;
+            position: relative;
+            transition: right 400ms ease-in-out;
+        }
+        .new:hover:before {
+            right: -25%;
+        }
+        .new:hover span {
+            z-index: 2;
+            color: #fff;
+        }
+        .new:before {
+            content: '';
+            position: absolute;
+            right: 125%;
+            top: 0;
+            width: 170%;
+            height: 100%;
+            background-color: red;
+            transition: right 400ms ease-in-out;
+            transform: skewX(45deg);
+        }
+    </style>
+    <div class="center">
+        <a href="" class="new"><span>test test</span></a>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
